@@ -63,3 +63,13 @@ variable "instance_type" {
   type    = string
   default = "t2.micro"
 }
+
+
+variable "repository_name" {
+  type    = string
+  default = "django_repository"
+}
+
+
+
+
