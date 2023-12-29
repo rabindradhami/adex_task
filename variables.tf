@@ -80,3 +80,14 @@ variable "lb_name" {
   default = "django_lb"
 }
 
+variable "certificate_arn" {
+  type    = string
+  default = "certificate_arn"
+}
+
+variable "django_lb_target_group_name" {
+  type    = string
+  default = "django_lb_target_group"
+}
+
+
