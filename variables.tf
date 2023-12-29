@@ -70,6 +70,13 @@ variable "repository_name" {
   default = "django_repository"
 }
 
+variable "s3_bucket_name" {
+  type    = string
+  default = "django_lb_bucket"
+}
 
-
+variable "lb_name" {
+  type    = string
+  default = "django_lb"
+}
 
