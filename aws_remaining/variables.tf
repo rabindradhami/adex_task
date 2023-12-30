@@ -49,7 +49,7 @@ variable "container_name" {
 
 variable "docker_image" {
   type    = string
-  default = "docker-image-url"
+  default = "634378737141.dkr.ecr.us-east-1.amazonaws.com/django-repository:latest"
 }
 
 
@@ -70,14 +70,9 @@ variable "repository_name" {
   default = "django_repository"
 }
 
-variable "s3_bucket_name" {
-  type    = string
-  default = "django_lb_bucket"
-}
-
 variable "lb_name" {
   type    = string
-  default = "django_lb"
+  default = "django-lb"
 }
 
 variable "certificate_arn" {
@@ -87,7 +82,7 @@ variable "certificate_arn" {
 
 variable "django_lb_target_group_name" {
   type    = string
-  default = "django_lb_target_group"
+  default = "django-target-group"
 }
 
 

@@ -3,7 +3,7 @@ resource "aws_ecr_repository" "django_repository" {
 }
 
 resource "aws_ecr_lifecycle_policy" "django_policy" {
-  repository = aws_ecr_repository.django_repository
+  repository = aws_ecr_repository.django_repository.name
 
   policy = <<EOF
 {
