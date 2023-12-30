@@ -36,6 +36,7 @@ A. Manually
     
     2. Go to django-docker-quickstart folder
        - cd django-docker-quickstart
+       - cp env.example .env
        - DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f docker-compose.yml up --build -d
        - docker images
        - tag it and push it to ecr using the push command from ecr repository
@@ -68,16 +69,21 @@ Please Perform Using Sudo.
 
     enter the access key and secret key
 
-2. After that update the xxxxxxxxxxxxxx part with your aws accound id.
+3. Go to django-docker-quickstart folder
+       - cd django-docker-quickstart
+       - cp env.example .env    
+
+
+4. After that update the xxxxxxxxxxxxxx part with your aws accound id.
    - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin xxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com
    - docker tag django-docker-quickstart_backend:latest xxxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/django-repository:latest
    - docker push xxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/django-docker-quickstart_backend:latest
 
    Note: You can get the following things from the ecr push command. You can simply update the xxxxxx part and everything will be the same.
 
-3. Make the script executable.
+5. Make the script executable.
    - chmod +x run_all.sh
 
-4. Run the script
+6. Run the script
 
    - ./run_all.sh
