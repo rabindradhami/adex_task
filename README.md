@@ -39,8 +39,12 @@ A. Manually
        - cp env.example .env
        - DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f docker-compose.yml up --build -d
        - docker images
-       - tag it and push it to ecr using the push command from ecr repository
+       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin xxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com
+       - docker tag django-docker-quickstart_backend:latest xxxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/django-repository:latest
+       - docker push xxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/django-docker-quickstart_backend:latest
        - copy the docker image url
+
+       Note: update the xxxxxxxx with your aws accound id.
 
     3. After that go to aws_remaining folder and run the following command  
       before running the below command update the variable.tf file.
