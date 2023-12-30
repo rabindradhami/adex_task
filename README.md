@@ -22,7 +22,7 @@ A. Manually
 
     Note: Make sure you have proper permission for the aws.
 
-  and you can remove the following part from the provider.tf file from both aws_ecr and aws_remaining
+  and you can remove the following part from the provider.tf file from both aws_ecr and aws_remaining folders.
   
     access_key = "access_key_id"
     secret_key = "secret_key"
