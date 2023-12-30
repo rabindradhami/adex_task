@@ -28,8 +28,8 @@ A. Manually
     secret_key = "secret_key"
 
    1. Go to aws_ecr folder and run the following command
-      - terraform plan
       - terraform init
+      - terraform plan
       - terraform apply 
 
       this will create the aws ecr repository needed for us to push the docker image
@@ -52,8 +52,8 @@ A. Manually
       
       Now run the following command
 
-      - terraform plan
       - terraform init
+      - terraform plan
       - terraform apply
       this will create the ecs cluster, load balancer, ec2 instances, rds database, vpc, certificate for loadbalancer to listen on https, security groups and will run the image on ecs cluster.
 

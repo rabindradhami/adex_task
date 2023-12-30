@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "You must configure aws profile on cli."
+
 if [ "$EUID" -ne 0 ]; then
   echo "This script must be run as root"
   exit 1
